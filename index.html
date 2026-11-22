@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--
+    1. Placeringen av script-taggen spelar roll eftersom 
+    webbläsaren läser HTML-koden uppifrån och ner. Om script-taggen placeras i 
+    head-sektionen, kommer webbläsaren att försöka ladda och köra JavaScript-koden 
+    innan resten av HTML-dokumentet har laddats. Detta kan leda till problem 
+    om JavaScript-koden försöker ändra eller använda HTML-element som ännu inte 
+    har lästs in på sidan. Genom att placera script-taggen precis innan stängningstaggen </body> säkerställs det att hela HTML-dokumentet har laddats innan JavaScript-koden körs. 
+    
+    2. defer gör att JavaScript-filen laddas samtidigt som HTML läses in. Men JavaScript-koden körs först när hela HTML-dokumentet har lästs klart. Det gör att JavaScript kan använda alla HTML-element på sidan.
+    -->
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
