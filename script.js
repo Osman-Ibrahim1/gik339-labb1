@@ -1,18 +1,29 @@
+
+// Uppgift 2
+
 /*
-    console.log(name);
-    console.log(age)
-    console.log(school)
-    */
+console.log(name);
+console.log(age);
+console.log(school);
+*/
+
 {
-  let name = "Osman Adam";
-  const age = 20;
-  var school = "Högskolan dalarna";
+    let name = "Osman Adam";
+    const age = 20;
+    var school = "Högskolan dalarna";
 
-  console.log(name);
-  console.log(age);
-  console.log(school);
+    console.log(name);
+    console.log(age);
+    console.log(school);
+}
 
-  /*
+/*
+console.log(name);
+console.log(age);
+console.log(school);
+*/
+
+/*
 Reflektion uppgift 2
 
 1. Skillnaden mellan var, let och const:
@@ -20,14 +31,13 @@ Reflektion uppgift 2
 let och const fungerar bara inom blocket
 där de skapades.
 
-var fungerar både inuti och utanför blocket.
-
+var fungerar både inuti och utanför
+ett vanligt block.
 
 2. Vad händer med console.log?
 
 Före blocket:
-name och age ger fel eftersom de inte
-är skapade ännu.
+Variablerna name och age är inte tillgängliga.
 school visar undefined eftersom den
 är skapad med var men inte fått sitt värde.
 
@@ -36,30 +46,28 @@ Alla variabler fungerar och skriver ut
 sina värden i konsolen.
 
 Efter blocket:
-name och age ger fel eftersom de
-bara fungerar inom blocket.
+Variablerna name och age är inte tillgängliga
+eftersom de bara fungerar inom blocket.
 
 school fungerar eftersom den använder var
 och skriver ut "Högskolan dalarna".
+
+Obs: I webbläsaren finns även window.name,
+som inte är samma variabel som name i blocket.
 */
-}
-/*
-    console.log(name);
-    console.log(age)
-    console.log(school)
-    */
+
 
 // Uppgift 3 och 4
 
 const add = (num1, num2) => {
-  console.log(num1 == 0);
-  console.log(num2 === "0");
-  console.log(num2 === 0);
-  console.log(num1 == NaN);
+    console.log(num1 == 0);
+    console.log(num2 === "0");
+    console.log(num2 === 0);
+    console.log(num1 == NaN);
 
-  console.log(num1 ? "truthy" : "falsy");
+    console.log(num1 ? "truthy" : "falsy");
 
-  if (
+    if (
         num1 != null &&
         num2 != null &&
         typeof num1 === "number" &&
@@ -71,10 +79,10 @@ const add = (num1, num2) => {
     } else {
         return "Felaktiga värden";
     }
-  
 };
 
- /*
+
+/*
 Reflektion uppgift 3
 
 1. Om jag använder let istället för const
@@ -95,27 +103,41 @@ Till exempel om num1 = 5 och num2 = 3
 returnerar funktionen 8.
 */
 
+
 /*
 Reflektion uppgift 4
 
-1. Förklarar vad en ternary operator är och hur den skiljer sig från en if()-sats.?
+1. Vad är en ternary operator och hur
+skiljer den sig från en if-sats?
 
-En ternary operator är ett kortare sätt att skriva en if()-sats. Den har tre delar: ett villkor, ett värde som returneras om villkoret är sant, och ett värde som returneras om villkoret är falskt.
+En ternary operator är ett kortare sätt
+att skriva en if/else-sats.
+
+Den har tre delar: ett villkor, ett värde
+om villkoret är sant och ett värde
+om villkoret är falskt.
 
 Exempel på en ternary operator:
 
 const result = condition ? valueIfTrue : valueIfFalse;
 
-hur den skiljer sig från en if()-sats är att den är mer kompakt och kan användas direkt i uttryck, medan en if()-sats är mer läsbar och kan innehålla flera rader kod.
+Skillnaden är att ternary är mer kompakt
+och kan användas direkt i uttryck,
+medan en if-sats kan innehålla flera
+rader kod.
 
-2. Vad skillnaden mellan att använda två (==) och tre (===) likhetstecken är.
-Skillnaden mellan att använda två (==) och tre (===) likhetstecken är att == jämför värdena utan att ta hänsyn till datatypen, medan === jämför både värdena och datatyperna.
+2. Vad är skillnaden mellan == och ===?
 
-till exempel:
-5 == "5" // true, eftersom värdena är lika
-5 === "5" // false, eftersom datatyperna är olika (number vs string)
+== jämför värden och kan omvandla datatyper.
 
-3. Förklarar hur du löste if-satsens villkor som kontrollerar att parametrarna inte är null.
+=== jämför både värden och datatyper.
+
+Till exempel:
+
+5 == "5"   // true
+5 === "5"  // false
+
+3. Hur löste jag if-satsens villkor?
 
 Jag använde != null för att kontrollera
 att num1 och num2 inte är null eller undefined.
@@ -123,18 +145,21 @@ att num1 och num2 inte är null eller undefined.
 Jag använde typeof för att kontrollera
 att båda är tal.
 
-Jag använde Number.isNaN() för att kontrollera
+Jag använde !Number.isNaN() för att kontrollera
 att värdena inte är NaN.
 
 Jag använde && eftersom alla villkor
 måste vara sanna för att talen ska adderas.
-
 */
 
-/*
-console.log(add(0, 0));
-console.log(add(0, 3));
-console.log(add(5, 3));
-console.log(add("5", 3));
-*/
 
+// Uppgift 5
+
+const num1 = 0;
+let arg1;
+let sum = false;
+
+// Test 1
+
+console.log("Test 1");
+console.log(add(sum, 1));
